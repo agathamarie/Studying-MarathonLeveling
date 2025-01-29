@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marathon 141 JS - Hard</title>
+</head>
+
+<body>
+    <h2> Exc 1</h2>
+    <form method="post">
+        <input id="name" type="text" placeholder="Name of your product: ">
+        <input id="cost" type="number" placeholder="Your product cost: ">
+        <input id="quantity" type="number" placeholder="Quantity of product: ">
+        <input type="button" onclick="javascript:gettingProduct();" value="Submit">
+    </form>
+    <div id="section"></div>
+    <br>
+
+    <form method="post">
+        <input id="productSpecific" type="text" placeholder="Looking for a specific Product?: ">
+        <input type="button" onclick="javascript:showProduct();" value="Filter">
+    </form>
+    <div id="productsSpecifics"></div>
+
+    <script src="./script-exc.js"></script>
+</body>
+</html>

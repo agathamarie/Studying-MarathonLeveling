@@ -1,0 +1,45 @@
+*{
+    background-color: #ffa2cd;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#block{
+    background-color: #ffff;
+    padding: 50px;
+    width: 600px;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    left: 33%
+}
+
+h1{
+    font-family: 'Pokemon Solid', sans-serif;
+    color: #c73d7e;
+    background-color: #ffff;
+}
+
+button{
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #ffff;
+}
+
+div{
+    background-color: #ffff;
+    padding: 10px 0px 0px 0px;
+}
+.cards{
+    margin: 10px 0px 10px 0px;
+    background-color: #ffff;
+    padding: 25px;
+    border: 1px solid #cbcbcb;
+    box-shadow: 10px 10px 39px -14px rgba(179,179,179,1);
+}
+img{
+    background-color: #ffff;
+}
