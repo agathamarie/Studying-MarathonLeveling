@@ -146,13 +146,18 @@ const peopleData = people.map(function(person) {
 });
 
 // found the more older
-var older = Math.max.apply(null, peopleData.age);
-console.log(older);
+let olderPerson = peopleData[0];
+for (let person of peopleData) {
+  if (person.age > olderPerson.age) {
+    olderPerson = person;
+  }
+}
+console.log(olderPerson.name);
 
 // Destructuring 
-let {nameP, age} = peopleData;
-// console.log(`Name: ${peopleData.nameP[0]} Age: ${peopleData.age[0]}`);
-// console.log(`Name: ${peopleData.nameP[1]} Age: ${peopleData.age[1]}`);
+peopleData.forEach(({ name, age }) => {
+  console.log(`Nome: ${name}, Idade: ${age}`);
+});
 
 
 /*4.Crie uma classe Carrinho para gerenciar produtos em um carrinho de compras.
@@ -211,14 +216,10 @@ Use destructuring na assinatura da função para extrair as propriedades do obje
 Retorne uma mensagem formatada no formato:
 "Olá, [nome]! Você tem [idade] anos e seu e-mail é [email]."
 Faça a função ser uma expressão atribuída a uma constante. */
-const listUsers = [];
 
-function addUsers(name, email, age){
-  const user = {
-    name: name,
-    email: email,
-    age: age
-  }
-  listUsers.push(user);
-  console.log(`Hello, ${name}! You have ${age} years old and your email is ${email}`)
-}
+const formatUser = ({ name, email, age }) => {
+  return `Hello, ${name}! You are ${age} years old and your email is ${email}`;
+};
+
+const user = { name: 'Agatha Marie', email: 'agathamarie@email.com', age: 18 };
+console.log(formatUser(user));
